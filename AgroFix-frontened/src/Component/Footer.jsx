@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-success text-white pt-5 pb-3">
       <div className="container">
         <div className="row">
-          {/* About Section */}
+     
           <div className="col-md-4 mb-3">
             <h5>About Bounty Basket</h5>
             <p>
