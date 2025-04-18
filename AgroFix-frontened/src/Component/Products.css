@@ -1,0 +1,20 @@
+.btn-click-animate::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.6);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s, opacity 1s;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .btn-click-animate:active::after {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+  
