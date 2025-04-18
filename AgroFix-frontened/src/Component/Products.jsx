@@ -16,7 +16,7 @@ const ProductCatalog = () => {
     console.log("called");
     const fetchProducts = async () => {
       try {
-        const res = await fetch("http://localhost:3000/products");
+        const res = await fetch("https://agrofix-by9i.onrender.com/products");
         const data = await res.json();
         console.log(data);
         setLoad(false);

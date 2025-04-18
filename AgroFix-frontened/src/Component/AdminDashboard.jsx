@@ -12,7 +12,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     const call = async () => {
-      const result = await fetch("http://localhost:3000/getorderdetails");
+      const result = await fetch("https://agrofix-by9i.onrender.com/getorderdetails");
       const data = await result.json();
       setOrders(data);
       setcustomerOrders(data);

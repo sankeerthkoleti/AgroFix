@@ -24,7 +24,7 @@ const PlaceOrder = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        let data = await fetch('http://localhost:3000/products');
+        let data = await fetch('https://agrofix-by9i.onrender.com/products');
         let res = await data.json();
         setProductsList(res);
       } catch (error) {
@@ -66,7 +66,7 @@ const PlaceOrder = () => {
       address: formData.address,
     };
 
-    let res = await fetch('http://localhost:3000/addorder', {
+    let res = await fetch('https://agrofix-by9i.onrender.com/addorder', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(obj),
@@ -80,7 +80,7 @@ const PlaceOrder = () => {
       items: selectedItems,
     };
 
-    res = await fetch('http://localhost:3000/addorderitems', {
+    res = await fetch('https://agrofix-by9i.onrender.com/addorderitems', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(obj),

@@ -10,7 +10,7 @@ const TrackOrder = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const result = await fetch('http://localhost:3000/getorderdetails');
+        const result = await fetch('https://agrofix-by9i.onrender.com/getorderdetails');
         const data = await result.json();
         setAllOrders(data);
       } catch (err) {
@@ -25,7 +25,7 @@ const TrackOrder = () => {
     if (match) {
       setSelectedOrder(match);
       try {
-        const res = await fetch(`http://localhost:3000/getitems/${match.id}`);
+        const res = await fetch(`https://agrofix-by9i.onrender.com/getitems/${match.id}`);
         const itemData = await res.json();
         setOrderItems(itemData);
       } catch (err) {

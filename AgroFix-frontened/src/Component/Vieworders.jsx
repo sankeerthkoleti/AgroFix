@@ -32,7 +32,7 @@ const OrderDetails = ({ order }) => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/getItems/${order.id}`);
+        const res = await fetch(`https://agrofix-by9i.onrender.com/getItems/${order.id}`);
         const data = await res.json();
         setItems(data);
       } catch (error) {
@@ -109,7 +109,7 @@ const OrderList = () => {
   const handleStatusChange = async (id, newStatus) => {
     try {
       console.log(id,newStatus);
-      const res = await fetch(`http://localhost:3000/updateStatus`, {
+      const res = await fetch(`https://agrofix-by9i.onrender.com/updateStatus`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id, status: newStatus })

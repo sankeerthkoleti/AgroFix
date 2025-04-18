@@ -21,7 +21,7 @@ const InventoryTable = () => {
   }, []);
 
   const fetchProducts = async () => {
-    const res = await fetch('http://localhost:3000/getcatalogue');
+    const res = await fetch('https://agrofix-by9i.onrender.com/getcatalogue');
     const data = await res.json();
     setProducts(data);
   };
@@ -38,7 +38,7 @@ const InventoryTable = () => {
     }
 
     try {
-      const res = await fetch('http://localhost:3000/addproduct', {
+      const res = await fetch('https://agrofix-by9i.onrender.com/addproduct', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newItem)
@@ -57,7 +57,7 @@ const InventoryTable = () => {
 
   const handleDelete = async (productId) => {
     try {
-      const res = await fetch(`http://localhost:3000/deleteproduct/${productId}`, {
+      const res = await fetch(`https://agrofix-by9i.onrender.com/deleteproduct/${productId}`, {
         method: 'DELETE'
       });
       if (res.ok) {
